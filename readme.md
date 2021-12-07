@@ -19,9 +19,9 @@ At `/dist` folder a `.vsix` file will be generated, to install follow the steps 
 
 You can take a look at this link to see [how](https://community.particle.io/t/how-to-install-a-vscode-extension-from-a-vsix-file/51014)
 
-## Local Running
+## Dev Mode
 
-To run local at your machine press F5
+To run local at your machine while developing just press F5
 
 ---
 
