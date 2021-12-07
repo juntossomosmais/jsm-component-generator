@@ -1,17 +1,15 @@
 import { window } from "vscode";
 
-import { createStoreDirectory } from "./createDirectory";
-import * as creaters from "./createFiles";
+import { createComponentDirectory } from "./createDirectory";
+import { createFiles } from "./createFiles";
 
-export async function createStore(path: string, fileName: string) {
-  createStoreDirectory(path, fileName);
+export async function createComponent(path: string, fileName: string) {
+  createComponentDirectory(path, fileName);
 
-  const STORE_PATH = `${path}/${fileName}`;
-  creaters.createVue(STORE_PATH, fileName);
-  creaters.createScss(STORE_PATH, fileName);
-  creaters.createTest(STORE_PATH, fileName);
+  const FULL_PATH = `${path}/${fileName}`;
+  createFiles(FULL_PATH, fileName);
 
   window.showInformationMessage(
-    `Store ${fileName} has been created in ${path}`
+    `Component ${fileName} successfully created in ${path}`
   );
 }

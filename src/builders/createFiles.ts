@@ -21,3 +21,9 @@ export function createTest(storePath: string, name: string) {
     Buffer.from(TEMPLATES(name).test)
   );
 }
+
+export const createFiles = (storePath: string, name: string) => {
+  createVue(storePath, name);
+  createScss(storePath, name);
+  createTest(storePath, name);
+};

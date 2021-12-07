@@ -1,6 +1,8 @@
 export const TEMPLATES = (name: string) => {
   return {
-    vue: `<template><slot/></template>
+    vue: `<template>
+    <!-- your pretty component -->
+</template>
 <script lang="ts">
 import Vue from 'vue'
 
