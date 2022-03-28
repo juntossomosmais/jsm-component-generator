@@ -1,11 +1,16 @@
-const camelCaseName = (name: string) =>
-  name.replace(/[A-Z]/g, (m) => "-" + m.toLowerCase());
+const camelCaseName = (name: string) => {
+  name = name.charAt(0).toLowerCase() + name.slice(1);
+  name = name.replace(/[A-Z]/g, (m) => "-" + m.toLowerCase());
+
+  return name;
+};
 
 export const TEMPLATES = (name: string) => {
   return {
     vue: `<template>
-      <div class="${camelCaseName}" data-testid="${camelCaseName}>
-      </div>
+  <div class="${camelCaseName(name)}" data-testid="${camelCaseName(
+      name
+    )}"></div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
