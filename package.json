@@ -1,8 +1,8 @@
 {
-  "name": "jsm-vue-component-generator",
-  "displayName": "JS+ Vue Componente Generator",
-  "description": "Create Vue components folder and files with JS+ style",
-  "version": "0.2.2",
+  "name": "jsm-generator",
+  "displayName": "JS+ Generator",
+  "description": "Create components folder and files with JS+ style",
+  "version": "0.3.0",
   "publisher": "juntossomosmais",
   "repository": {
     "type": "git",
@@ -13,27 +13,49 @@
   },
   "categories": [
     "Vue",
+    "React",
+    "TypeScript",
     "Formatters",
     "Programming Languages",
     "Snippets"
   ],
   "activationEvents": [
-    "onCommand:jsm-vue-component-generator.generate"
+    "onCommand:jsm-generator.generateVue",
+    "onCommand:jsm-generator.generateReact",
+    "onCommand:jsm-generator.generateReactJS"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "jsm-vue-component-generator.generate",
-        "title": "JS+ Vue: Generate Component"
+        "command": "jsm-generator.generateVue",
+        "title": "JS+ Generator: Generate Vue Component"
+      },
+      {
+        "command": "jsm-generator.generateReact",
+        "title": "JS+ Generator: Generate React Component"
+      },
+      {
+        "command": "jsm-generator.generateReactJS",
+        "title": "JS+ Generator: Generate React Component with JavaScript"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "group": "JS+ Vue",
-          "command": "jsm-vue-component-generator.generate",
-          "title": "JS+Vue: Generate Component"
+          "group": "JS+ Generator",
+          "command": "jsm-generator.generateVue",
+          "title": "JS+: Generate Vue Component"
+        },
+        {
+          "group": "JS+ Generator",
+          "command": "jsm-generator.generateReact",
+          "title": "JS+ Generator: Generate React Component"
+        },
+        {
+          "group": "JS+ Generator",
+          "command": "jsm-generator.generateReactJS",
+          "title": "JS+ Generator: Generate React Component with JavaScript"
         }
       ]
     }
