@@ -65,6 +65,7 @@
     }
   },
   "scripts": {
+    "prepare": "husky install",
     "vscode:prepublish": "yarn run compile",
     "generate": "vsce package -o dist",
     "compile": "tsc -p ./",
@@ -98,13 +99,6 @@
     "*.{ts,tsx,js,jsx,vue}": [
       "npx prettier --write",
       "eslint **/*.js --fix-dry-run"
-    ],
-    "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged",
-        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-        "pre-push": "yarn test"
-      }
-    }
+    ]
   }
 }
