@@ -5,7 +5,7 @@
 
 ### Options
 
-- JS+ Generator: Vue Componen
+- JS+ Generator: Vue Component
 - JS+ Generator: Generate React Component
 - JS+ Generator: Generate React Component with JavaScript
 
@@ -49,7 +49,7 @@ To run local at your machine while developing just press F5
 
 You also can check:
 - [frontend-guideline](https://github.com/juntossomosmais/frontend-guideline) with some Front-end patterns that we use on our projects 😁
-- [frontend-challenge](https://github.com/juntossomosmais/frontend-challenge) with our frontend challenge for open positions (We are hiring!)
+- [frontend-challenge](https://github.com/juntossomosmais/frontend-challenge) with our frontend challenge for open positions (We are hiring!) 💻
 
 ---
 
