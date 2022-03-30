@@ -1,10 +1,3 @@
-const camelCaseName = (name: string) => {
-  name = name.charAt(0).toLowerCase() + name.slice(1);
-  name = name.replace(/[A-Z]/g, (m) => "-" + m.toLowerCase());
-
-  return name;
-};
-
 export const TEMPLATES = (name: string) => {
   return {
     index: `
@@ -34,5 +27,5 @@ describe('${name}', () => {
   })
 })
 `,
-  };
-};
+  }
+}

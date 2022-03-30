@@ -1,0 +1,22 @@
+trigger:
+- 'main'
+
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: 16.13.0
+  displayName: 'Install Node.js'
+
+- bash: |
+    yarn &&  yarn generate
+  displayName: Compile
+- bash: |
+    yarn deploy
+  displayName: Publish
+  env:
+    VSCE_PAT: $(VSCE_PAT)
