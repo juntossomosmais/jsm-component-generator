@@ -3,6 +3,9 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
+  
+variables:
+  - group: publish-to-marketplace
 
 steps:
 
