@@ -6,7 +6,7 @@
   "publisher": "juntossomosmais",
   "repository": {
     "type": "git",
-    "url": "https://github.com/juntossomosmais/vue-create-component"
+    "url": "https://github.com/juntossomosmais/jsm-component-generator"
   },
   "engines": {
     "vscode": "^1.62.0"
