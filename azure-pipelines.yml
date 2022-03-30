@@ -18,4 +18,4 @@ steps:
     yarn deploy
   displayName: Publish
   env:
-    VSCE_PAT: $(VSCE_PAT)
+    VSCE_PAT: $(MARKETPLACE_MANAGE_JSM_ROBOT_PAT)
