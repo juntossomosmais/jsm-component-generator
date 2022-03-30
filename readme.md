@@ -17,7 +17,7 @@ See it in action:
 ## Install
 
 ### VSCode Marketplace
-Under development
+[Link](https://marketplace.visualstudio.com/items?itemName=JuntosSomosMais.jsm-generator)
 
 ### Locally
 - Install dependencies `yarn install`
