@@ -4,6 +4,7 @@
   "description": "Create components folder and files with JS+ style",
   "version": "0.3.0",
   "publisher": "juntossomosmais",
+  "icon": "resource/logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/juntossomosmais/jsm-component-generator"

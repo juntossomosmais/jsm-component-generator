@@ -1,4 +1,4 @@
-<h1 align="center"><img src="./img/logo.png" alt="Venice Design System" width="100" /></h1>
+<h1 align="center"><img src="./resource/logo.png" alt="Venice Design System" width="100" /></h1>
 
 # JS+ Generator
  A VSCode extension to generate components as the way we do at Juntos Somos Mais
