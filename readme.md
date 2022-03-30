@@ -1,6 +1,12 @@
-# JS+ Vue Generate Component
+# JS+ Generator
 
-### A VSCode extension to generate Vue compoenets as the way we do at Juntos Somos Mais
+## A VSCode extension to generate compoenets as the way we do at Juntos Somos Mais
+
+
+### Options
+- JS+ Generator: Vue Componen
+- JS+ Generator: Generate React Component
+- JS+ Generator: Generate React Component with JavaScript
 
 <br />
 

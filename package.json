@@ -45,7 +45,7 @@
         {
           "group": "JS+ Generator",
           "command": "jsm-generator.generateVue",
-          "title": "JS+: Generate Vue Component"
+          "title": "JS+ Generator: Vue Component"
         },
         {
           "group": "JS+ Generator",
