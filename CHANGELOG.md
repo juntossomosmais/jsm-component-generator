@@ -45,6 +45,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Creating extensions
 
 [unreleased]: https://github.com/juntossomosmais/jsm-component-generator/compare/0.4.0...HEAD
-[0.3.0]: https://github.com/juntossomosmais/jsm-component-generator/releases/tag/0.4.0
+[0.4.0]: https://github.com/juntossomosmais/jsm-component-generator/releases/tag/0.4.0
 [0.3.0]: https://github.com/juntossomosmais/jsm-component-generator/releases/tag/0.3.0
 [0.2.2]: https://github.com/juntossomosmais/jsm-component-generator/releases/tag/0.2.2
