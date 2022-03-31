@@ -1,11 +1,19 @@
 import { commands, ExtensionContext, window } from 'vscode'
 
-import { createVueComponent, createReactComponent } from './builders'
+import {
+  createVueComponent,
+  createVuetifyComponent,
+  createReactComponent,
+} from './builders'
 
 const EXTENSION_NAME = 'jsm-generator'
 const generateVue = commands.registerCommand(
   `${EXTENSION_NAME}.generateVue`,
   handleCreateVueComponent
+)
+const generateVuetify = commands.registerCommand(
+  `${EXTENSION_NAME}.generateVuetify`,
+  handleCreateVuetifyComponent
 )
 const generateReact = commands.registerCommand(
   `${EXTENSION_NAME}.generateReact`,
@@ -17,6 +25,7 @@ const generateReactJS = commands.registerCommand(
   handleCreateReactComponentJS
 )
 export function activate({ subscriptions }: ExtensionContext) {
+  subscriptions.push(generateVuetify)
   subscriptions.push(generateVue)
   subscriptions.push(generateReact)
   subscriptions.push(generateReactJS)
@@ -32,6 +41,17 @@ async function handleCreateVueComponent({ path }: { path: string }) {
   })
   if (path && fileName) {
     return await createVueComponent(path, fileName)
+  }
+
+  return window.showErrorMessage('Something went wrong!')
+}
+async function handleCreateVuetifyComponent({ path }: { path: string }) {
+  const fileName = await window.showInputBox({
+    title: 'Enter the name of the Vuetify Component without initial V',
+    placeHolder: 'TextField (for VTextField)',
+  })
+  if (path && fileName) {
+    return await createVuetifyComponent(path, fileName)
   }
 
   return window.showErrorMessage('Something went wrong!')

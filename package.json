@@ -3,7 +3,7 @@
   "displayName": "JS+ Generator",
   "description": "Create components folder and files with JS+ style",
   "license": "Apache-2.0",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "publisher": "juntossomosmais",
   "icon": "resource/logo.png",
   "repository": {
@@ -23,6 +23,7 @@
   ],
   "activationEvents": [
     "onCommand:jsm-generator.generateVue",
+    "onCommand:jsm-generator.generateVuetify",
     "onCommand:jsm-generator.generateReact",
     "onCommand:jsm-generator.generateReactJS"
   ],
@@ -32,6 +33,10 @@
       {
         "command": "jsm-generator.generateVue",
         "title": "JS+ Generator: Generate Vue Component"
+      },
+      {
+        "command": "jsm-generator.generateVuetify",
+        "title": "JS+ Generator: Generate Vuetify Wrapper Component"
       },
       {
         "command": "jsm-generator.generateReact",
@@ -48,6 +53,11 @@
           "group": "JS+ Generator",
           "command": "jsm-generator.generateVue",
           "title": "JS+ Generator: Vue Component"
+        },
+        {
+          "group": "JS+ Generator",
+          "command": "jsm-generator.generateVuetify",
+          "title": "JS+ Generator: Generate Vuetify Wrapper Component"
         },
         {
           "group": "JS+ Generator",
