@@ -1,11 +1,17 @@
-const camelCaseName = (name: string) => {
+export interface VueTemplates {
+  vue: string
+  scss: string
+  test: string
+}
+
+export const camelCaseName = (name: string) => {
   name = name.charAt(0).toLowerCase() + name.slice(1)
   name = name.replace(/[A-Z]/g, (m) => '-' + m.toLowerCase())
 
   return name
 }
 
-export const TEMPLATES = (name: string) => {
+export const TEMPLATES = (name: string): VueTemplates => {
   return {
     vue: `<template>
   <div class="${camelCaseName(name)}" data-testid="${camelCaseName(

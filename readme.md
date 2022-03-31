@@ -3,9 +3,11 @@
 # JS+ Generator
  A VSCode extension to generate components as the way we do at Juntos Somos Mais
 
-### Options
+### Available Options
 
 - JS+ Generator: Vue Component
+- JS+ Generator: Vuetify Component
+    - Use only the name of Vuetify component in PascalCase without the initial V
 - JS+ Generator: Generate React Component
 - JS+ Generator: Generate React Component with JavaScript
 

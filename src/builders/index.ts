@@ -1,2 +1,2 @@
-export { createVueComponent } from './vue'
+export { createVueComponent, createVuetifyComponent } from './vue'
 export { createReactComponent } from './react'
