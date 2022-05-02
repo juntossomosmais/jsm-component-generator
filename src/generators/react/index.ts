@@ -1,14 +1,15 @@
 import { window } from 'vscode'
 
-import { createComponentDirectory } from './createDirectory'
-import { createFiles } from './createFiles'
+import { createDirectory } from '../../builders/folder'
+
+import { createFiles } from './create'
 
 export async function createReactComponent(
   path: string,
   fileName: string,
   js?: boolean
 ) {
-  createComponentDirectory(path, fileName)
+  createDirectory(`${path}/${fileName}`)
 
   const FULL_PATH = `${path}/${fileName}`
   createFiles(FULL_PATH, fileName, js)
