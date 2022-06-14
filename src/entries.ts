@@ -17,6 +17,7 @@ export const generateVue = commands.registerCommand(
     createVueComponent
   )
 )
+
 export const generateVuetify = commands.registerCommand(
   `${EXTENSION_NAME}.generateVuetify`,
   createHandler(
@@ -25,6 +26,7 @@ export const generateVuetify = commands.registerCommand(
     createVuetifyComponent
   )
 )
+
 export const generateReact = commands.registerCommand(
   `${EXTENSION_NAME}.generateReact`,
   createHandler(
