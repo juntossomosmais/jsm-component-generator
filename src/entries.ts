@@ -41,6 +41,7 @@ export const generateReactJS = commands.registerCommand(
   createHandler(
     'Enter the name of the React Component (JS)',
     'MyReactComponent',
-    createReactComponent
+    createReactComponent,
+    true
   )
 )
