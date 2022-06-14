@@ -21,7 +21,7 @@ import @name@ from '.'
 
 describe('<@name@ />', () => {
   it('should render the component', () => {
-    const element = render(<@name@ />)  
+    const element = render(<@name@ />)
 
     expect(element.getByText('@name@ component')).toBeInTheDocument()
   })
