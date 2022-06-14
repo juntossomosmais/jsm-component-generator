@@ -34,8 +34,9 @@ export function createTest(storePath: string, name: string, extension: string) {
 
 export const createFiles = (storePath: string, name: string, js?: boolean) => {
   const extensions = js ? 'js' : 'ts'
+  const suffix = js ? '' : 'x'
 
-  createIndex(storePath, name, `${extensions}x`)
+  createIndex(storePath, name, `${extensions}${suffix}`)
   createStyle(storePath, name, extensions)
-  createTest(storePath, name, `${extensions}x`)
+  createTest(storePath, name, `${extensions}${suffix}`)
 }
