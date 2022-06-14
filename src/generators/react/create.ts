@@ -20,14 +20,14 @@ export function createStyle(
   extension: string
 ) {
   createFile(
-    `${storePath}/style.${extension}`,
+    `${storePath}/styles.${extension}`,
     buildTemplate(name, TEMPLATES.style)
   )
 }
 
 export function createTest(storePath: string, name: string, extension: string) {
   createFile(
-    `${storePath}/index.spec.${extension}`,
+    `${storePath}/${name}.spec.${extension}`,
     buildTemplate(name, TEMPLATES.test)
   )
 }
