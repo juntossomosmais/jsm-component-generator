@@ -20,21 +20,23 @@ export function createStyle(
   extension: string
 ) {
   createFile(
-    `${storePath}/style.${extension}`,
+    `${storePath}/styles.${extension}`,
     buildTemplate(name, TEMPLATES.style)
   )
 }
 
 export function createTest(storePath: string, name: string, extension: string) {
   createFile(
-    `${storePath}/index.spec.${extension}`,
+    `${storePath}/${name}.spec.${extension}`,
     buildTemplate(name, TEMPLATES.test)
   )
 }
 
 export const createFiles = (storePath: string, name: string, js?: boolean) => {
   const extensions = js ? 'js' : 'ts'
-  createIndex(storePath, name, `${extensions}x`)
+  const suffix = js ? '' : 'x'
+
+  createIndex(storePath, name, `${extensions}${suffix}`)
   createStyle(storePath, name, extensions)
-  createTest(storePath, name, `${extensions}x`)
+  createTest(storePath, name, `${extensions}${suffix}`)
 }
