@@ -1,11 +1,12 @@
 export const TEMPLATES = {
   index: `import React from 'react'
+import * as S from './styles'
   
 const @name@ = () => {
   return (
-    <div testid="@camelCaseName@">
+    <S.Wrapper data-testid="@camelCaseName@">
       @name@ component
-    </div>
+    </S.Wrapper>
   )
 }
   
@@ -13,17 +14,17 @@ export default @name@`,
 
   style: `import styled from 'styled-components'
 
-export const @name@Wrapper = styled.div\`
+export const Wrapper = styled.div\`
 \``,
   test: `import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import @name@ from '.'
 
 describe('<@name@ />', () => {
   it('should render the component', () => {
-    const element = render(<@name@ />)
+    render(<@name@ />)
 
-    expect(element.getByText('@name@ component')).toBeInTheDocument()
+    expect(screen.getByTestId("@camelCaseName@")).toBeInTheDocument()
   })
 })
   `,
