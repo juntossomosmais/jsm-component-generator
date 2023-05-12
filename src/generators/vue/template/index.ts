@@ -3,9 +3,9 @@ export const TEMPLATES = {
     <div class="@camelCaseName@" data-testid="@camelCaseName@"></div>
   </template>
   <script lang="ts">
-  import Vue from 'vue'
+  import { defineComponent } from '@marketplace/utils'
   
-  export default Vue.extend({
+  export default defineComponent({
     name: '@name@',
   })
   </script>
@@ -14,12 +14,13 @@ export const TEMPLATES = {
   .@camelCaseName@ {
   } `,
   test: `import { mount } from '@vue/test-utils'
-  
+  import { describe, it, expect } from 'vitest'
+
   import @name@ from '../@name@.vue'
-  
+    
   describe('@name@.vue', () => {
     const wrapper = mount(@name@)
-  
+    
     it('Should render component', () => {
       expect(wrapper.exists()).toBeTruthy()
     })
