@@ -29,7 +29,7 @@ See it in action:
 At `/dist` folder a `.vsix` file will be generated.
 Install it following the steps below:
 - Open the extension panel
-- Click at the 3 dots near to extesion search input
+- Click at the 3 dots near to extension search input
 - Select **Install from VSIX**
 - Select the file generated at `/dist` folder.
 - It's done!
