@@ -1,7 +1,7 @@
 export const TEMPLATES = {
   vue: `<template>
 <!-- If you want to use v-model add ':value="value" @input="update" @change="update"' to wrapper tag -->
-  <V@name@ class="@wrapperClassName@" v-bind="{ ...$props, ...$attrs }" v-on="$listeners">
+  <V@name@ class="@wrapperClassName@" v-on="$listeners" :data-gtm="dataGtm" :data-testid="dataTestid">
     <template v-for="(_, scopedSlotName) in $scopedSlots"#[scopedSlotName]="slotData">
       <slot :name="scopedSlotName" v-bind="slotData" />
     </template>
@@ -12,16 +12,27 @@ export const TEMPLATES = {
 </template>
 
 <script lang="ts">
-// Remember to add V@name@ import on '/plugins/vuetify/index.ts
-import Vue from 'vue'
+// @todo[vuetify] Remember to add V@name@ import on '/plugins/vuetify/index.ts
+import { defineComponent } from '@marketplace/utils/helpers/vue-3/vue-3'
 
-export default Vue.extend({
+
+export default defineComponent({
   name: '@name@',
-  // uncomment lines below if your wrapper uses v-model
-  /*
   props: {
-    value: {},
-  },
+    dataGtm: {
+      type: String,
+      required: true
+    },
+    dataTestid: {
+      type: String,
+      required: true
+    }
+  // uncomment lines below if your wrapper uses v-model
+  //  value: {},
+  }
+
+  /*
+  uncomment lines below if your wrapper uses v-model
   methods: {
     update(newValue) {
       this.$emit('input', newValue)

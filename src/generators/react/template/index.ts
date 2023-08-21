@@ -4,7 +4,7 @@ import * as S from './styles'
   
 const @name@ = () => {
   return (
-    <S.Wrapper data-testid="@camelCaseName@">
+    <S.Wrapper data-testid="@camelCaseName@" data-gtm="@camelCaseName@">
       @name@ component
     </S.Wrapper>
   )
